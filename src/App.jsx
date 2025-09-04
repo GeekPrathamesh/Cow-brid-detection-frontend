@@ -102,38 +102,33 @@ function App() {
           </div>
         )}
 
-        {/* Results */}
-        {results.length > 0 && (
-          <div className="w-full max-w-md mt-6">
-            <h3 className="text-2xl font-semibold mb-4 text-gray-700">
-              Results:
-            </h3>
-            <ul className="space-y-2">
-              {results.map((item, idx) => (
-                <ul className="space-y-2">
-                  {results.map((item, idx) => (
-                    <li
-                      key={item.index}
-                      className="bg-white p-4 rounded-xl shadow flex justify-between items-center hover:shadow-lg transition"
-                    >
-                      <span className="font-medium">
-                        {`Cow ${
-                          idx + 1
-                        } breed name according to our research and analysis is:`}
-                      </span>
-                      <span
-                        className="px-3 py-1 bg-gradient-to-r from-yellow-200 via-amber-300 to-yellow-400 
-                   text-blue-800 font-semibold rounded-full shadow-md"
-                      >
-                        {item.breed}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              ))}
-            </ul>
-          </div>
-        )}
+       {/* Results */}
+{results.length > 0 && (
+  <div className="w-full max-w-md mt-6">
+    <h3 className="text-2xl font-semibold mb-4 text-gray-700">
+      Results:
+    </h3>
+    <ul className="space-y-2">
+      {results.map((item, idx) => (
+        <li
+          key={item.index}
+          className="bg-white p-4 rounded-xl shadow flex justify-between items-center hover:shadow-lg transition"
+        >
+          <span className="font-medium">
+            {`Cow ${idx + 1} breed name according to our research and analysis is:`}
+          </span>
+          <span
+            className="px-3 py-1 bg-gradient-to-r from-yellow-200 via-amber-300 to-yellow-400 
+                       text-blue-800 font-semibold rounded-full shadow-md"
+          >
+            {item.breed}
+          </span>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
       </div>
     </div>
   );
